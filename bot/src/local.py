@@ -2,12 +2,16 @@ import os
 
 from flask import Flask, request, jsonify
 
-from discord_interactions import verify_key_decorator, InteractionType, InteractionResponseType
-from restaurant_club_bot.handler.interaction_handler import InteractionHandler
+from discord_interactions import (
+    verify_key_decorator,
+    InteractionType,
+    InteractionResponseType,
+)
+from restaurant_club_bot.interaction.interaction_handler import InteractionHandler
 
-CLIENT_PUBLIC_KEY = os.getenv('PUBLIC_KEY')
+CLIENT_PUBLIC_KEY = os.getenv("PUBLIC_KEY")
 if CLIENT_PUBLIC_KEY is None:
-  print('noneeeee')
+    print("noneeeee")
 
 app = Flask(__name__)
 
@@ -19,10 +23,10 @@ TODO
 
 handler = InteractionHandler()
 
-@app.route('/interactions', methods=['POST'])
+
+@app.route("/interactions", methods=["POST"])
 @verify_key_decorator(CLIENT_PUBLIC_KEY)
 def interactions():
-  if request.json['type'] == InteractionType.APPLICATION_COMMAND:
-    request.headers
-    return jsonify(handler.hello_world())
-  
+    if request.json["type"] == InteractionType.APPLICATION_COMMAND:
+        request.headers
+        return jsonify(handler.hello_world())

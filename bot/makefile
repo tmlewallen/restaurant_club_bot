@@ -1,10 +1,15 @@
+.PHONY: build test format run-local clean release
+
 build: 
 	pip install -e '.[test,server]'
 
-test: build
-	echo TEST
+test:
+	python -m pytest
 
-release: build test
+format: 
+	python -m black src test
+
+release: clean format build test
 	pip install . --target build/archive \
 		--platform manylinux2014_x86_64 \
 		--only-binary :all: \
