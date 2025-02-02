@@ -1,0 +1,28 @@
+[build-system]
+requires = [
+  "setuptools >= 40.9.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "restaurant_club_bot"
+version = "0.0.1"
+authors = [
+  { name="Thomas Lewallen"},
+]
+description = "A discord bot for my restaurant club guild"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "discord-interactions==0.4.0",
+  "requests==2.32.3"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest==8.3.4"
+]
+server = [
+  "Flask==3.1.0",
+  "python-dotenv==1.0.1"
+]
