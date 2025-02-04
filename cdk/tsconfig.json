@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "outDir": "dist"
+    },
+    "extends": "@tsconfig/node23/tsconfig.json",
+    "include": [
+        "lib/*"
+    ],
+    "exclude": []
+}

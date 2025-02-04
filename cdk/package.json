@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-club-bot",
+  "version": "0.0.1",
+  "description": "A CDK stack to deploy the restaurant club bot",
+  "main": "app.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmlewallen/restaurant_club_bot.git"
+  },
+  "author": "Thomas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmlewallen/restaurant_club_bot/issues"
+  },
+  "homepage": "https://github.com/tmlewallen/restaurant_club_bot#readme",
+  "devDependencies": {
+    "@tsconfig/node23": "^23.0.0",
+    "@types/node": "^22.13.0",
+    "aws-cdk": "^2.177.0",
+    "typescript": "^5.7.3"
+  }
+}
